@@ -17,3 +17,10 @@ mlflow server --backend-store-uri ./mlruns --default-artifact-root s3://yt-plugi
 
 # Set custom TCP in security groups to port “5000” bc we are running in 5000 port
 # To access add :5000 in the end to url
+
+### DVC AWS setup ###
+
+create s3 bucket
+pip install awscli dvc[s3]
+remove dvc remote 
+dvc remote add -d remote s3://<bucket name>
