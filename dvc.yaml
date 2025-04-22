@@ -44,9 +44,9 @@ stages:
       - experiment_info.json
 
   model_registry:
-    cmd: python src/model/model_registry.py
+    cmd: python src/model/register_model.py
     deps:
-      - src/model/model_registry.py
+      - src/model/register_model.py
       - experiment_info.json
       
    
