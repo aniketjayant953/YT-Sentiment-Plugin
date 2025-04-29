@@ -26,4 +26,4 @@ def test_load_latest_staging_model(model_name, stage):
         print(f"Model '{model_name}' version {latest_version} loaded successfully from '{stage}' stage.")
 
     except Exception as e:
-        pytest.fail(f"Model loading failed with an error: {e}")
+        pytest.fail(f"Model loading failed with error: {e}")
