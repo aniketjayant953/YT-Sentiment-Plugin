@@ -65,13 +65,8 @@ stages:
       size: 4119949
     - path: tfidf_vectorizer.pkl
       hash: md5
-<<<<<<< HEAD
       md5: 2d91cb8d753871feef7f6a92cb2253e5
       size: 384000
-=======
-      md5: ce8516d782275989dda028ff8c1ff40d
-      size: 384019
->>>>>>> b82e05f7e0474504298d7ca38af9fc914fedd4c9
   model_evaluation:
     cmd: python src/model/model_evaluation.py
     deps:
