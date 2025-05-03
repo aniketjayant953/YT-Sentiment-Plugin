@@ -19,7 +19,7 @@ def promote_model():
         )
 
     # Get the latest version in staging
-    latest_version_staging = client.get_latest_vesions(model_name, stages=["Staging"])[0].version
+    latest_version_staging = client.get_latest_versions(model_name, stages=["Staging"])[0].version
 
     # Promote the new model to production
     client.transition_model_version_stage(
