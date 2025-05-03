@@ -86,5 +86,5 @@ jobs:
           AWS_DEFAULT_REGION: eu-north-1
 
         run: |
-          pytest scripts/test_load_model.py
+          pytest scripts/test_model_signature.py
 
