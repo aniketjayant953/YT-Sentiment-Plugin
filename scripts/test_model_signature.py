@@ -37,7 +37,7 @@ def test_model_with_vectorizer(model_name, stage, vectorizer_path):
         prediction = model.predict(input_df)
 
         # Verify the input shape matches the vectorizer's feature output
-        assert input_df.shape[1] == len(vectorizer.get_features_names_out()), "Input feature count mismatch"
+        assert input_df.shape[1] == len(vectorizer.get_feature_names_out()), "Input feature count mismatch"
 
         # Verify the output shape (assuming binary classification with a single output)
         assert len(prediction) == input_df.shape[0], "Output row count mismatch"
