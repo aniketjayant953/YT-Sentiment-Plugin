@@ -12,7 +12,7 @@ def promote_model():
     # Archive the current production model
     prod_versions = client.get_latest_versions(model_name, stages=["Production"])
     for version in prod_versions:
-        client.transitions_model_version_stages(
+        client.transition_model_version_stage(
             name=model_name,
             version=version.version,
             stage="Archived"
