@@ -60,7 +60,7 @@ def test_model_performance(model_name, stage, holdout_data_path, vectorizer_path
         assert recall_new > expected_recall, f"Accuracy should be at least {expected_recall}, got {recall_new}"    
         assert f1_new > expected_f1, f"Accuracy should be at least {expected_f1}, got {f1_new}"    
 
-        print(f"Performance test passed for model '{model_name}' version {latest_version}")
-        
+        print(f"Performance test passed for model '{model_name}' version {latest_version}.")
+
     except Exception as e:
         pytest.fail(f"Model performance test failed with error: {e}")
