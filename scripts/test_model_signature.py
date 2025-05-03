@@ -14,7 +14,7 @@ def test_model_with_vectorizer(model_name, stage, vectorizer_path):
     client = MlflowClient()
 
     # Get the latest version in the specified stage
-    latest_version_info = client.get_latest_version(model_name, stages=[stage])
+    latest_version_info = client.get_latest_versions(model_name, stages=[stage])
     latest_version = latest_version_info[0].version if latest_version_info else None
 
     assert latest_version is not None, f"No model found in the '{stage}' stage for '{model_name}'"
