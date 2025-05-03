@@ -106,5 +106,5 @@ jobs:
           AWS_DEFAULT_REGION: eu-north-1
 
         run: |
-          pytest scripts/promote_model.py
+          python scripts/promote_model.py
 
