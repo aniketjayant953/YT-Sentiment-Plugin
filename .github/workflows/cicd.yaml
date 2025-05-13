@@ -136,22 +136,25 @@ jobs:
         if: success()
         run: |
           docker tag yt-chrome-plugin:latest 864899871537.dkr.ecr.eu-north-1.amazonaws.com/yt-chrome-plugin:latest
-
+ 
       - name: Push Docker Image
         if: success()
         run: |
           docker push 864899871537.dkr.ecr.eu-north-1.amazonaws.com/yt-chrome-plugin:latest
-
+      
+      # Zip the required files
       - name: Zip files for deployment
         if: success()
         run: |
           zip -r deployment.zip appspec.yml deploy/scripts/install_dependencies.sh deploy/scripts/start_docker.sh
 
+      # Upload the ZIP file to S3
       - name: Upload Zip file to S3
         if: success()
         run: |
           aws s3 cp deployment.zip s3://yt-plugin-codedeploy-misc-bucket/deployment.zip
-
+      
+      # Deploy to AWS CodeDeploy using the uploaded ZIP file
       - name: Deploy to AWS CodeDeploy
         if: success()
         run: |

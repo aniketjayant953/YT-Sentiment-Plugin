@@ -22,4 +22,4 @@ fi
 echo "Starting new container..."
 docker run -d -p 80:5000 --name campusx-app 864899871537.dkr.ecr.eu-north-1.amazonaws.com/yt-chrome-plugin:latest
 
-echo "Container started successfully"
+echo "Container started successfully."
